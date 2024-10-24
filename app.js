@@ -8,6 +8,14 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
 }).addTo(map);
 
+// Add zoom control
+L.control.zoom({
+    position: 'topright' // You can change the position as needed (e.g., 'topleft', 'bottomright', etc.)
+}).addTo(map);
+
+// Add scale control
+L.control.scale().addTo(map);
+
 // Define markers with questions
 const markers = [
     { position: [51.505, -0.09], question: "What is 2 + 2?", answer: "4" },
@@ -81,5 +89,6 @@ function updateScore(newScore) {
 }
 
 // Example usage: updateScore(10); // Call this function to update the score
+
 
 
